@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts, Navigation & Images</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            color: red;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        /* Main Heading */
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .subtitle {
+            color: blueviolet;
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+
+        /* Layout Box */
+        .layout {
+            border: 2px solid blue;
+            background: red;
+            text-align: center;
+        }
+
+        .header {
+            padding: 18px;
+            background: skyblue;
+            border-bottom: 2px solid white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navigation {
+            padding: 14px;
+            background: yellowgreen;
+            border-bottom: 2px solid gray;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .content-area {
+            display: flex;
+            min-height: 180px;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #c6c60e;
+            border-right: 2px solid #aaa;
+            font-size: 20px;
+        }
+
+        .main-content {
+            flex: 1.2;
+        }
+
+        .content:last-child {
+            border-right: none;
+        }
+
+        .footer {
+            padding: 15px;
+            background: #13d7d7;
+            border-top: 2px solid #aaa;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Code Box */
+        .code-box {
+            margin-top: 40px;
+            background: #333;
+            color: #ed0a0a;
+            padding: 25px;
+            border-radius: 15px;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        .code-box .selector {
+            color: orangered;
+        }
+
+        .code-box .property {
+            color: #b7d77d;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            .content-area {
+                flex-direction: column;
+            }
+
+            .content {
+                min-height: 100px;
+                border-right: none;
+                border-bottom: 2px solid #aaa;
+            }
+
+            .content:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            CSS Layouts,<br>
+            Navigation &<br>
+            Images
+        </h1>
+
+        <p class="subtitle">
+            A Beginner's Guide to Display Properties,<br>
+            Positioning, Hover Effects, and Styling<br>
+            Images
+        </p>
+
+        <!-- Layout Diagram -->
+        <div class="layout">
+
+            <div class="header">
+                Header
+            </div>
+            
+
+            <div class="navigation">
+                Navigation Menu
+            </div>
+
+            <div class="content-area">
+
+                <div class="content">
+                    Content
+                </div>
+
+                <div class="content main-content">
+                    Main<br>Content
+                </div>
+
+                <div class="content">
+                    Content
+                </div>
+
+            </div>
+
+            <div class="footer">
+                Footer
+            </div>
+
+        </div>
+
+        <!-- CSS Code -->
+        <div class="code-box">
+            <span class="selector">.navigation</span> {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">display</span>: flex;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">position</span>: sticky;<br>
+            }
+        </div>
+
+    </div>
+
+</body>
+</html>
