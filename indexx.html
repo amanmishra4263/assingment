@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            background: grey;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            height: 100%;
+            background: aqua;
+            padding: 20px 0px;
+        }
+
+        .main {
+            width: calc(100% - 200px);
+            height: 100%;
+            background: blue;
+        }
+
+        .sidebar .navigations {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .navigations .links {
+            /* border: 1px solid white; */
+            padding: 5px 10px;
+            /* border-radius: 8px; */
+            width: 100%;
+            text-align: center;
+            transition: all 0.5s linear 0s;
+        }
+
+        .navigations .links:hover {
+            background: rgb(194, 162, 162);
+        }
+
+        .main .container {
+            height: 100%;
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main .container h1 {
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="navigations">
+            <div class="links">
+                <h1>LOGO</h1>
+            </div>
+            <div class="links">
+                Home
+            </div>
+            <div class="links">
+                About
+            </div>
+            <div class="links">
+                Contact
+            </div>
+            <div class="links">
+                Services
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1>This is Main Section </h1>
+        </div>
+    </div>
+</body>
+
+</html>
